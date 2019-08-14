@@ -4,7 +4,7 @@ class fluentd::repo inherits fluentd {
   if $::fluentd::repo_manage {
     case $::osfamily {
       'Debian': {
-        include ::fluentd::repo::apt
+        contain ::fluentd::repo::apt
       }
       'RedHat': {
         include ::fluentd::repo::yum
